@@ -1,0 +1,177 @@
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #1a237e, #3949ab);
+  transition: background 0.5s ease;
+  color: white;
+}
+
+
+body.ganar {
+  background: linear-gradient(120deg, #a2d3a4, #015506);
+}
+
+body.perder {
+  background: linear-gradient(120deg, #b71c1c, #ef5350);
+}
+
+body.empate {
+  background: linear-gradient(120deg, #1565c0, #42a5f5);
+}
+
+
+.game-container {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 30px 40px;
+  border-radius: 20px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  animation: aparecer 0.6s ease;
+}
+
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+
+#resultado {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-contenido {
+  background: #222;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.arena {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.choice {
+  font-size: 60px;
+  width: 80px;
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+
+
+.golpe {
+  animation: golpe 0.7s ease;
+}
+
+.romper {
+  animation: romper 0.7s ease;
+}
+
+.cortar {
+  animation: cortar 0.7s ease;
+}
+
+
+@keyframes golpe {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    transform: translateX(20px) scale(1.2);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes romper {
+  0% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(25deg) scale(1.4);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes cortar {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-20deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+.round {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 120px;
+  font-weight: bold;
+  z-index: 999;
+  animation: pop 0.6s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}

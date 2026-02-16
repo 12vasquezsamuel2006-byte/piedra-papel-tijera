@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Piedra, Papel o Tijera</title>
+
+    
+</head>
+<body>
+
+    
+    <div id="modal" class="modal">
+        <div class="modal-contenido">
+            <h2>🎮 ¡BIENVENIDO!</h2>
+            <p>
+                ¿Cómo jugar?<br><br>
+                🪨 Piedra gana a ✂️ Tijera<br>
+                📄 Papel gana a 🪨 Piedra<br>
+                ✂️ Tijera gana a 📄 Papel<br><br>
+                Elige una opción y reta a la CPU 💻
+            </p>
+            <button id="cerrarModal">Empezar</button>
+        </div>
+    </div>
+
+    
+    <div class="game-container">
+
+        <h1>🪨 Piedra, 📄 Papel, ✂️ Tijera</h1>
+
+        <div class="botones">
+            <button id="piedra">🪨 Piedra</button>
+            <button id="papel">📄 Papel</button>
+            <button id="tijera">✂️ Tijera</button>
+        </div>
+        <div class="arena">
+  <div id="jugadorChoice" class="choice">❔</div>
+  <div id="cpuChoice" class="choice">❔</div>
+</div>
+
+        <p id="mensaje">Elige una opción</p>
+        <p id="resultado"></p>
+
+        <h2>Marcador</h2>
+        <p>Tus Victorias: <span id="jugador">0</span></p>
+        <p>CPU: <span id="cpu">0</span></p>
+
+    </div>
+
+    
+    <script src="piedra-papel-tijeras.js"></script>
+
+   <link rel="stylesheet" href="style.css">
+ 
+</body>
+</html>
