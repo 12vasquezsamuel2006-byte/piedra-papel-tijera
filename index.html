@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>Piedra, Papel o Tijera</title>
 
-    
+    <!-- IMPORTANTE PARA CELULAR -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-    
+    <!-- MODAL -->
     <div id="modal" class="modal">
         <div class="modal-contenido">
             <h2>🎮 ¡BIENVENIDO!</h2>
@@ -25,7 +26,6 @@
 
     <!-- CONTENEDOR CENTRAL -->
     <div class="game-container">
-
         <h1>🪨 Piedra, 📄 Papel, ✂️ Tijera</h1>
 
         <div class="botones">
@@ -33,10 +33,11 @@
             <button id="papel">📄 Papel</button>
             <button id="tijera">✂️ Tijera</button>
         </div>
+
         <div class="arena">
-  <div id="jugadorChoice" class="choice">❔</div>
-  <div id="cpuChoice" class="choice">❔</div>
-</div>
+            <div id="jugadorChoice" class="choice">❔</div>
+            <div id="cpuChoice" class="choice">❔</div>
+        </div>
 
         <p id="mensaje">Elige una opción</p>
         <p id="resultado"></p>
@@ -44,13 +45,11 @@
         <h2>Marcador</h2>
         <p>Tus Victorias: <span id="jugador">0</span></p>
         <p>CPU: <span id="cpu">0</span></p>
-
     </div>
 
     <!-- JS -->
     <script src="piedra-papel-tijeras.js"></script>
+    <link rel="stylesheet" href="style.css">
 
-   <link rel="stylesheet" href="style.css">
- 
 </body>
 </html>
